@@ -1,0 +1,15 @@
+server:
+  port: 6633
+
+spring:
+  application:
+    name: ${artifactId}
+  cloud:
+    nacos:
+      config:
+        server-addr: nacos.com:8848
+        file-extension: yaml
+        shared-dataids: common-test.yaml
+        refreshable-dataids: common-test.yaml
+      discovery:
+        server-addr: nacos.com:8848
