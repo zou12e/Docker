@@ -15,9 +15,16 @@ public class ConfigController {
     @Value(value = "${test1}")
     private String test1;
 
+    @Value(value = "${t1}")
+    private String t1;
+
+    @Value(value = "${t2}")
+    private String t2;
+
 
     @GetMapping("/test")
     public String test() {
-        return "test: " + name  + test1;
+        return "test: " + name  + test1 + "|" + t1  + " | " + t2;
+
     }
 }

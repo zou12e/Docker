@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: ${artifactId}
+    name: @artifactId@
   cloud:
     nacos:
       config:
@@ -13,3 +13,6 @@ spring:
         refreshable-dataids: common-test.yaml
       discovery:
         server-addr: nacos.com:8848
+
+t1: ${profile.name}
+t2: ${artifactId}
